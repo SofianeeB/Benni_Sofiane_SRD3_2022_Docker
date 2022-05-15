@@ -31,4 +31,51 @@ CMD [ "npm", "run", "start" ]
 
 ```
 
+Backend :
+
+```
+FROM node:14
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["npm","start"] 
+
+```
+
+# Docker-compose.YML :
+
+```
+version: "3.1"
+services:
+  mongodb:
+    image: "mongo"
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/data/db
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+volumes:
+  data:
+```
 
