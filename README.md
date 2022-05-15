@@ -78,4 +78,11 @@ services:
 volumes:
   data:
 ```
+# Un schéma récapitule l'ensemble de l'architecture du porjet :
+```
+![image](https://user-images.githubusercontent.com/105608933/168494735-f5bbdccb-73da-4f86-855d-a5c1e9984fc3.png)
+
+```
+
+![image](https://user-images.githubusercontent.com/105608933/168494720-12952384-c3a6-406e-a555-0fb47fc24647.png)
 
