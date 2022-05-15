@@ -53,7 +53,7 @@ CMD ["npm","start"]
 # Docker-compose.YML pour démarrer nos containers et nos services :
 
 ```
-version: "3.1"
+version: "3"
 services:
   mongodb:
     image: "mongo"
