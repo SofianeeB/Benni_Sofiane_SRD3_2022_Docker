@@ -1,7 +1,7 @@
 # Benni_Sofiane_SRD3_2022_Docker
 
 
-# L’objectifs de ce projet est d’intégrer le déploiement d’une API Rest avec Docker afin de pouvoir l’intégrer dans un système d’intégration continue.
+L’objectif de ce projet est d’intégrer le déploiement d’une API Rest avec Docker afin de pouvoir l’intégrer dans un système d’intégration continue.
 
 1. Récupérer le projet API REST qui comporte une partie backend (API rest) et une partie
 frontend (reactJS) : deux dossiers backend et frontend.
@@ -17,5 +17,18 @@ b. Docker-compose pour démarrer le(s) container(s) (Bien décrire l’ensemble 
 c. Architecture de l’application
 
 
-# DockerFile :
+# DockerFile(s) afin de builder notre image pour les serveurs de prod :
+
+Frontend : 
+
+```
+FROM node:alpine as builder
+WORKDIR /frontend
+COPY ./package.json /frontend
+RUN npm install
+COPY . .
+CMD [ "npm", "run", "start" ]
+
+```
+
 
