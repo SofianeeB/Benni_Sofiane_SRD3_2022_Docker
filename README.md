@@ -50,7 +50,7 @@ CMD ["npm","start"]
 
 ```
 
-# Docker-compose.YML :
+# Docker-compose.YML pour démarrer nos containers et nos services :
 
 ```
 version: "3.1"
