@@ -78,7 +78,7 @@ services:
 volumes:
   data:
 ```
-# Un schéma récapitule l'ensemble de l'architecture du porjet :
+# Un schéma récapitule l'ensemble de l'architecture du projet :
 
 ![image](https://user-images.githubusercontent.com/105608933/168494720-12952384-c3a6-406e-a555-0fb47fc24647.png)
 
